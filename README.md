@@ -180,3 +180,18 @@ CREATE TABLE [dbo].[OrderDelivery](
 	[OtherAdjust] [decimal](15, 2) NULL
 ) ON [PRIMARY]
 GO
+
+# 
+For data model like:
+
+create type city (
+   name text,
+   code int
+);
+
+create table user (
+    id uuid,
+    name text,
+    cities list<FROZEN<city>>,
+    primary key ( id )
+);

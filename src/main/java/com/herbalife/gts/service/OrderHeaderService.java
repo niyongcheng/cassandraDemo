@@ -12,6 +12,6 @@ public class OrderHeaderService {
     private OrderHeaderRepository orderHeaderRepository;
 
     public void orderHeaderSave(OrderHeader orderHeader){
-        orderHeaderRepository.OrderHeaderSave(orderHeader);
+        orderHeaderRepository.save(orderHeader);
     }
 }
