@@ -1,4 +1,4 @@
-package com.herbalife.gts.repository;
+package com.herbalife.gts.repository.impl;
 
 import com.herbalife.gts.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class UserRepository {
+public class UserRepositoryImpl {
 
     @Autowired
     private CassandraTemplate cassendraTemplate;
