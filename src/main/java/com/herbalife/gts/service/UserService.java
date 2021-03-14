@@ -1,3 +1,4 @@
+/*
 package com.herbalife.gts.service;
 
 import com.herbalife.gts.model.User;
@@ -17,3 +18,4 @@ public class UserService {
         return userRepository.getAll();
     }
 }
+*/

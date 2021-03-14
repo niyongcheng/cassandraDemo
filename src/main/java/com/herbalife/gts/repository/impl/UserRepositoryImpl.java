@@ -1,3 +1,4 @@
+/*
 package com.herbalife.gts.repository.impl;
 
 import com.herbalife.gts.model.User;
@@ -17,3 +18,4 @@ public class UserRepositoryImpl {
         return cassendraTemplate.select("select ID, user_name from User", User.class);
     }
 }
+*/

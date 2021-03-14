@@ -3,3 +3,8 @@ spring:
     cassandra:
       port: 9042
       contact-points: 127.0.0.1
+      keyspace-name: cnsms
+      local-datacenter: DC1
+
+server:
+  port: 8090

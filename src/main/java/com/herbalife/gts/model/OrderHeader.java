@@ -1,60 +1,59 @@
 package com.herbalife.gts.model;
 
-import com.datastax.driver.mapping.annotations.Field;
-import com.datastax.driver.mapping.annotations.Frozen;
-import com.datastax.driver.mapping.annotations.Table;
 import lombok.Data;
+import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.Table;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Table(name = "OrderHeader")
+@Table
 @Data
 public class OrderHeader {
 
     @PrimaryKey
     private BigInteger orderHeaderId;
 
-    @Field
+    @Column
     private BigInteger customerProfileID;
 
-    @Field
+    @Column
     private String storeOrderID;
 
-    @Field
+    @Column
     private BigInteger procStoreID;
 
-    @Field
+    @Column
     private BigInteger shipStoreID;
 
-    @Field
+    @Column
     private BigDecimal totalAmount;
 
-    @Field
+    @Column
     private LocalDateTime createdOn;
 
-    @Field
+    @Column
     private LocalDateTime updatedOn;
 
-    @Field
+    @Column
     private String createdBy;
 
-    @Field
+    @Column
     private String updatedBy;
 
-    @Field
+    @Column
     private Boolean isDeleted;
 
-    @Frozen
+    @Column
     List<OrderDelivery> orderDeliveryList;
 
-    @Frozen
+    @Column
     List<OrderDetail> orderDetailList;
 
-    @Frozen
+    @Column
     List<OrderExtention> orderExtentionList;
 
 }

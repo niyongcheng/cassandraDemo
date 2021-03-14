@@ -1,33 +1,38 @@
 package com.herbalife.gts.model;
 
-import com.datastax.driver.mapping.annotations.Field;
-import com.datastax.driver.mapping.annotations.UDT;
+import com.datastax.oss.driver.api.core.ProtocolVersion;
+import com.datastax.oss.driver.api.core.type.DataType;
+import com.datastax.oss.driver.api.core.type.codec.TypeCodec;
+import com.datastax.oss.driver.api.core.type.reflect.GenericType;
+import edu.umd.cs.findbugs.annotations.NonNull;
+import edu.umd.cs.findbugs.annotations.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.cassandra.core.mapping.Column;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.nio.ByteBuffer;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Builder
-@UDT(name = "OrderDetail")
 public class OrderDetail {
-    @Field
+    @Column
     private BigInteger productID;
-    @Field
+    @Column
     private BigInteger quantity;
-    @Field
+    @Column
     private BigDecimal unitPrice;
-    @Field
+    @Column
     private BigDecimal volumePoint;
-    @Field
+    @Column
     private BigDecimal beforeDiscTaxAmount;
-    @Field
+    @Column
     private BigDecimal afterDiscTaxAmount;
-    @Field
+    @Column
     private BigDecimal discount;
 }

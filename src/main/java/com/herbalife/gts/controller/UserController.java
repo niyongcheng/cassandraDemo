@@ -1,3 +1,4 @@
+/*
 package com.herbalife.gts.controller;
 
 import com.herbalife.gts.model.User;
@@ -21,3 +22,4 @@ public class UserController {
         return userService.getUser();
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 package com.herbalife.gts.model;
 
 import com.datastax.driver.mapping.annotations.Table;
@@ -15,3 +16,4 @@ public class User {
 
     private String userName;
 }
+*/

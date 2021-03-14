@@ -1,39 +1,44 @@
 package com.herbalife.gts.model;
 
-import com.datastax.driver.mapping.annotations.Field;
-import com.datastax.driver.mapping.annotations.UDT;
+import com.datastax.oss.driver.api.core.ProtocolVersion;
+import com.datastax.oss.driver.api.core.type.DataType;
+import com.datastax.oss.driver.api.core.type.codec.TypeCodec;
+import com.datastax.oss.driver.api.core.type.reflect.GenericType;
+import edu.umd.cs.findbugs.annotations.NonNull;
+import edu.umd.cs.findbugs.annotations.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.cassandra.core.mapping.Column;
 
 import java.math.BigInteger;
+import java.nio.ByteBuffer;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Builder
-@UDT(name = "OrderDelivery")
-public class OrderDelivery {
+public class OrderDelivery{
 
-    @Field
+    @Column
     private String orderDeliveryType;
-    @Field
+    @Column
     private String senderName;
-    @Field
+    @Column
     private String senderProvince;
-    @Field
+    @Column
     private String senderCity;
-    @Field
+    @Column
     private String senderDistrict;
-    @Field
+    @Column
     private String senderAddress;
-    @Field
+    @Column
     private String senderCompany;
-    @Field
+    @Column
     private String senderPhone;
-    @Field
+    @Column
     private String senderMobile;
-    @Field
+    @Column
     private BigInteger expressCompanyId;
 }
