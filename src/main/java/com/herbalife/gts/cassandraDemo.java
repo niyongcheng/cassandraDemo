@@ -10,6 +10,5 @@ public class cassandraDemo {
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(cassandraDemo.class, args);
-        log.info("AAAAA");
     }
 }

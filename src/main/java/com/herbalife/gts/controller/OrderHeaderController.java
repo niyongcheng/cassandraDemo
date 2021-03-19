@@ -7,10 +7,7 @@ import com.herbalife.gts.model.OrderHeader;
 import com.herbalife.gts.service.OrderHeaderService;
 import javafx.scene.control.RadioMenuItem;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -85,6 +82,11 @@ public class OrderHeaderController {
                 .build();
 
         orderHeaderService.orderHeaderSave(orderheader);
+    }
+
+    @GetMapping("orderHeader/{orderHeaderId}")
+    public OrderHeader getOrderHeader(@PathVariable("orderHeaderId") BigInteger orderHeaderId){
+        return orderHeaderService.getOrderHeader(orderHeaderId);
     }
 
     private BigInteger getRandomInteger(){
