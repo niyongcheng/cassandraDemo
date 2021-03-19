@@ -60,11 +60,22 @@ public class OrderHeaderController {
                 .volumePoint(new BigDecimal(5.00))
                 .build();
 
+        OrderDetail orderDetail2 = OrderDetail.builder()
+                .afterDiscTaxAmount(new BigDecimal(30.00))
+                .beforeDiscTaxAmount(new BigDecimal(20.00))
+                .discount(new BigDecimal(30.00))
+                .productID(40000L)
+                .quantity(50000L)
+                .unitPrice(new BigDecimal(40.00))
+                .volumePoint(new BigDecimal(50.00))
+                .build();
+
         ArrayList<OrderDelivery> orderDeliveries = new ArrayList<OrderDelivery>();
         orderDeliveries.add(orderDelivery);
 
         ArrayList<OrderDetail> orderDetails = new ArrayList<>();
         orderDetails.add(orderDetail);
+        orderDetails.add(orderDetail2);
 
         ArrayList<OrderExtention> orderExtentions = new ArrayList<>();
         orderExtentions.add(orderExtention);
