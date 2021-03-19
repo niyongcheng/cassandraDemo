@@ -11,6 +11,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.UserDefinedType;
 
 import java.math.BigInteger;
 import java.nio.ByteBuffer;
@@ -19,6 +20,7 @@ import java.nio.ByteBuffer;
 @AllArgsConstructor
 @Data
 @Builder
+@UserDefinedType
 public class OrderDelivery{
 
     @Column
@@ -40,5 +42,5 @@ public class OrderDelivery{
     @Column
     private String senderMobile;
     @Column
-    private BigInteger expressCompanyId;
+    private Integer expressCompanyId;
 }

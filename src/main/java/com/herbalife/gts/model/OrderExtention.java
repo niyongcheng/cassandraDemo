@@ -11,6 +11,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.UserDefinedType;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -20,6 +21,7 @@ import java.nio.ByteBuffer;
 @AllArgsConstructor
 @Data
 @Builder
+@UserDefinedType
 public class OrderExtention {
 
     @Column
@@ -31,5 +33,5 @@ public class OrderExtention {
     @Column
     private BigDecimal exchangedFreight;
     @Column
-    private BigInteger exchangedPoints;
+    private Long exchangedPoints;
 }

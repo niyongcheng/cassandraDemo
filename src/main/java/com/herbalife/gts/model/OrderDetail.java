@@ -11,6 +11,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.UserDefinedType;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -20,11 +21,12 @@ import java.nio.ByteBuffer;
 @AllArgsConstructor
 @Data
 @Builder
+@UserDefinedType
 public class OrderDetail {
     @Column
-    private BigInteger productID;
+    private Long productID;
     @Column
-    private BigInteger quantity;
+    private Long quantity;
     @Column
     private BigDecimal unitPrice;
     @Column

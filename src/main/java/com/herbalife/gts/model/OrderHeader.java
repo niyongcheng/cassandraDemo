@@ -1,6 +1,9 @@
 package com.herbalife.gts.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
@@ -12,6 +15,9 @@ import java.util.List;
 
 @Table
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class OrderHeader {
 
     @PrimaryKey
@@ -29,7 +35,7 @@ public class OrderHeader {
     @Column
     private BigInteger shipStoreID;
 
-    @Column
+    /*@Column
     private BigDecimal totalAmount;
 
     @Column
@@ -45,15 +51,15 @@ public class OrderHeader {
     private String updatedBy;
 
     @Column
-    private Boolean isDeleted;
+    private Boolean isDeleted;*/
 
     @Column
-    List<OrderDelivery> orderDeliveryList;
+    List<OrderDelivery> orderDeliverys;
 
     @Column
-    List<OrderDetail> orderDetailList;
+    List<OrderDetail> orderDetails;
 
     @Column
-    List<OrderExtention> orderExtentionList;
+    List<OrderExtention> orderExtentions;
 
 }

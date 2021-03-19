@@ -4,7 +4,7 @@ spring:
       port: 9042
       contact-points: 127.0.0.1
       keyspace-name: cnsms
-      local-datacenter: DC1
+      local-datacenter: datacenter1
 
 server:
   port: 8090
